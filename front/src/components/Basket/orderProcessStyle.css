@@ -1,0 +1,77 @@
+.order-progress-bar {
+    margin: 15px auto 0px auto;
+    width: 95%;
+    align-self: center;
+}
+
+.progress {
+    color: #b8b8b8;
+}
+
+.progress-active {
+    color: #002245;
+}
+
+.icon {
+    color: white;
+}
+
+.order-progress {
+    text-align: center;
+    padding: 0;
+}
+
+.order-progress li {
+    display: inline-block;
+    width: 33%;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.name {
+    color: #b8b8b8;
+}
+
+.name-active {
+    color: #002245;
+}
+
+.order-progress li::after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #b8b8b8;
+    top: 28px;
+    left: -50%;
+    z-index: -1;
+}
+
+
+.order-progress li:first-child::after {
+    content: none;
+}
+
+.order-progress li.active {
+   color: #002245
+}
+
+.order-progress li.active + li::after {
+    background-color: #002245;
+}
+
+@media (max-width: 500px) {
+    .name,.name-active {
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    span.order {
+        font-size: 20px;
+    }
+
+    .order-progress li::after {
+        top: 21px;
+    }
+}
